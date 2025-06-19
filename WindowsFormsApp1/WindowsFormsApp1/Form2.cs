@@ -64,17 +64,18 @@ namespace WindowsFormsApp1
             
 
             UsuarioRepository repo = new UsuarioRepository(DbUtil.ConnectionString);
-            Usuario novoUsuario = new Usuario
+            Usuario novoUsuario = new Usuario()
             {
 
                 Poder = "básico",
                 Email = email,
                 Username = username,
-                Senha = HashUtil.GerarHashSha256(senha),
+                Senha = senha,
             };
 
 
-
+            UsuarioRepository repos = new UsuarioRepository(DbUtil.ConnectionString);
+            
 
 
             repo.DarPoderPorId(1, "admin");

@@ -61,18 +61,21 @@ namespace WindowsFormsApp1
 
         private void logar_Click(object sender, EventArgs e)
         {
+            UsuarioRepository repo = new UsuarioRepository(DbUtil.ConnectionString);
 
             string email = emailtext.Text;
-            string senha = HashUtil.GerarHashSha256(senhatext.Text);
+            string senha = senhatext.Text;
 
-            // Gera o hash da senha
            
+            string hashedsenha = HashUtil.GerarHashSha256(senha);
+            Usuario usuario = repo.ObterPorEmailESenha(email, hashedsenha);
             
+            
+            MessageBox.Show($"Hash gerado: {hashedsenha}\nEmail: {email}");
+            
+            Console.WriteLine($"@Senha (Hash): {senha}");
 
-            UsuarioRepository repo = new UsuarioRepository(DbUtil.ConnectionString);
-            Usuario usuario = repo.ObterPorEmailESenha(email,senha);
-
-            if (usuario != null && usuario.Username != null)
+            if (repo.ObterPorEmailESenha(email,hashedsenha)!=null)
             {
                 MainForm main = new MainForm();
                 this.Hide();
@@ -83,8 +86,6 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Credenciais inválidas.");
             }
-
-
         }
     }
 }

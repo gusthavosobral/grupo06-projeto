@@ -16,7 +16,8 @@ namespace WindowsFormsApp1
 
         public string Username { get; set; }
 
-       
+        public Usuario()
+        { }
     }
 }
       

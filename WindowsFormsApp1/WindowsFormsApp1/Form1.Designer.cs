@@ -30,12 +30,12 @@
         {
             this.LOGIN = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.emailtext = new System.Windows.Forms.RichTextBox();
-            this.senhatext = new System.Windows.Forms.RichTextBox();
             this.introducao = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.logar = new System.Windows.Forms.Button();
             this.registro = new System.Windows.Forms.Button();
+            this.emailtext = new System.Windows.Forms.TextBox();
+            this.senhatext = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // LOGIN
@@ -60,24 +60,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Senha";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // emailtext
-            // 
-            this.emailtext.Location = new System.Drawing.Point(84, 95);
-            this.emailtext.Name = "emailtext";
-            this.emailtext.Size = new System.Drawing.Size(175, 22);
-            this.emailtext.TabIndex = 3;
-            this.emailtext.Text = "";
-            this.emailtext.TextChanged += new System.EventHandler(this.email_TextChanged);
-            // 
-            // senhatext
-            // 
-            this.senhatext.Location = new System.Drawing.Point(84, 140);
-            this.senhatext.Name = "senhatext";
-            this.senhatext.Size = new System.Drawing.Size(175, 22);
-            this.senhatext.TabIndex = 4;
-            this.senhatext.Text = "";
-            this.senhatext.TextChanged += new System.EventHandler(this.senha_TextChanged);
             // 
             // introducao
             // 
@@ -129,6 +111,20 @@
             this.registro.UseVisualStyleBackColor = false;
             this.registro.Click += new System.EventHandler(this.registro_Click);
             // 
+            // emailtext
+            // 
+            this.emailtext.Location = new System.Drawing.Point(84, 97);
+            this.emailtext.Name = "emailtext";
+            this.emailtext.Size = new System.Drawing.Size(180, 20);
+            this.emailtext.TabIndex = 9;
+            // 
+            // senhatext
+            // 
+            this.senhatext.Location = new System.Drawing.Point(84, 136);
+            this.senhatext.Name = "senhatext";
+            this.senhatext.Size = new System.Drawing.Size(180, 20);
+            this.senhatext.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,12 +133,12 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.OIP__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(622, 492);
+            this.Controls.Add(this.senhatext);
+            this.Controls.Add(this.emailtext);
             this.Controls.Add(this.registro);
             this.Controls.Add(this.logar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.introducao);
-            this.Controls.Add(this.senhatext);
-            this.Controls.Add(this.emailtext);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LOGIN);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -159,12 +155,12 @@
 
         private System.Windows.Forms.Label LOGIN;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox emailtext;
-        private System.Windows.Forms.RichTextBox senhatext;
         private System.Windows.Forms.Label introducao;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button logar;
         private System.Windows.Forms.Button registro;
+        private System.Windows.Forms.TextBox emailtext;
+        private System.Windows.Forms.TextBox senhatext;
     }
 }
 

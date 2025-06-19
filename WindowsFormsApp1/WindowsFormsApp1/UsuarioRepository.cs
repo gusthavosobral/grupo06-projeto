@@ -20,17 +20,18 @@ namespace WindowsFormsApp1 {
     }
 
         public Usuario ObterPorEmailESenha(string email, string senha)
-        {
-            Usuario usuario = null;  // Mudei aqui para inicializar com null.
+        { Usuario usuario = null;
             using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
+
                 string query = "SELECT email, username, senha, poder, id FROM usuario WHERE email = @Email AND senha = @Senha";
+
                 using (var command = new MySqlCommand(query, connection))
                 {
-                   
+                    string hashedSenha = HashUtil.GerarHashSha256(senha); 
                     command.Parameters.AddWithValue("@Email", email);
-                    command.Parameters.AddWithValue("@Senha", senha);
+                    command.Parameters.AddWithValue("@Senha", senha); 
 
                     using (var reader = command.ExecuteReader())
                     {
@@ -39,12 +40,13 @@ namespace WindowsFormsApp1 {
                             usuario = new Usuario
                             {
                                 Email = reader.GetString("email"),
-                                Username = reader.GetString("username"),
+                                Username = reader.GetString("Username"),
                                 Senha = reader.GetString("senha"),
                                 Poder = reader.GetString("poder"),
                                 Id = reader.GetInt32("id")
                             };
                         }
+                        
                     }
                 }
             }
