@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20/06/2025 às 08:01
+-- Tempo de geração: 20/06/2025 às 09:45
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.0.30
 
@@ -40,11 +40,18 @@ CREATE TABLE `avaliacao` (
 --
 
 INSERT INTO `avaliacao` (`id`, `id_usuario`, `id_foto`, `comentario`, `curtida`) VALUES
-(1, 16, 1, 'lalala', 0),
-(2, 16, 1, '', 0),
+(1, 16, 1, 'lalala', 1),
+(2, 16, 1, '', 1),
 (3, 16, 2, NULL, 1),
 (4, 16, 3, NULL, 1),
-(5, 16, 4, NULL, 1);
+(5, 16, 4, NULL, 1),
+(6, 19, 7, NULL, 1),
+(7, 19, 1, NULL, 1),
+(8, 19, 2, NULL, 1),
+(9, 19, 3, NULL, 1),
+(10, 19, 4, NULL, 1),
+(11, 19, 5, NULL, 1),
+(12, 19, 6, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -107,7 +114,9 @@ INSERT INTO `usuario` (`id`, `email`, `senha`, `poder`, `Username`) VALUES
 (14, 'lari@gmail.com', 'jZae727K08KaOmK', 'básico', 'lala'),
 (15, 'larizinha@gmail.com', 'laj2Vo+nrWq6G9zWYgpHGgrKfUxEf1CKlK5Kqy7Ya9M=', 'básico', 'larissa'),
 (16, 'maria@gmail.com', 'Ym48gF537rRyxCxr5ge+KvesXAj9cFDyeOAzD+gav1c=', 'básico', 'maria123'),
-(17, 'lula@gmail.com', 'JnqpvFQUJyYlqmIegHwPOa2AOIifCy8p4MPpFCHrYC8=', 'básico', 'bolsonete');
+(17, 'lula@gmail.com', 'JnqpvFQUJyYlqmIegHwPOa2AOIifCy8p4MPpFCHrYC8=', 'básico', 'bolsonete'),
+(18, 'lola@gmail.com', 'pbT2ufgVnOnSYmAnH72bmFnCluNhLvHVPk1S/kRsLp4=', 'básico', 'lalalala'),
+(19, 'lali@gmail.com', 'jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=', 'básico', 'lali');
 
 --
 -- Índices para tabelas despejadas
@@ -141,7 +150,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `avaliacao`
 --
 ALTER TABLE `avaliacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `fotos`
@@ -153,7 +162,7 @@ ALTER TABLE `fotos`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Restrições para tabelas despejadas
