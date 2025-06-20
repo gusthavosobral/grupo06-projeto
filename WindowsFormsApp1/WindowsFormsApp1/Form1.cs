@@ -77,7 +77,7 @@ namespace WindowsFormsApp1
 
             if (repo.ObterPorEmailESenha(email,hashedsenha)!=null)
             {
-                MainForm main = new MainForm();
+                MainForm main = new MainForm(usuario);
                 this.Hide();
                 main.ShowDialog();
                 this.Show();

@@ -63,9 +63,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _72a4ad428596efd14eeb850e7c5b57f0 {
+        internal static System.Drawing.Bitmap foto1 {
             get {
-                object obj = ResourceManager.GetObject("72a4ad428596efd14eeb850e7c5b57f0", resourceCulture);
+                object obj = ResourceManager.GetObject("foto1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _72a4ad428596efd14eeb850e7c5b57f01 {
+        internal static System.Drawing.Bitmap foto2 {
             get {
-                object obj = ResourceManager.GetObject("72a4ad428596efd14eeb850e7c5b57f01", resourceCulture);
+                object obj = ResourceManager.GetObject("foto2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap blair {
+        internal static System.Drawing.Bitmap foto3 {
             get {
-                object obj = ResourceManager.GetObject("blair", resourceCulture);
+                object obj = ResourceManager.GetObject("foto3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,59 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap OIP {
+        internal static System.Drawing.Bitmap foto4 {
             get {
-                object obj = ResourceManager.GetObject("OIP", resourceCulture);
+                object obj = ResourceManager.GetObject("foto4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foto5 {
+            get {
+                object obj = ResourceManager.GetObject("foto5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foto6 {
+            get {
+                object obj = ResourceManager.GetObject("foto6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foto7 {
+            get {
+                object obj = ResourceManager.GetObject("foto7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap like_cheio {
+            get {
+                object obj = ResourceManager.GetObject("like_cheio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap like_vazio {
+            get {
+                object obj = ResourceManager.GetObject("like_vazio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

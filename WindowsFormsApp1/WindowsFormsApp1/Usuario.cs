@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    internal class Usuario
+     public class Usuario
     {
         public int Id { get; set; }
         public string Email { get; set; }
@@ -16,8 +16,7 @@ namespace WindowsFormsApp1
 
         public string Username { get; set; }
 
-        public Usuario()
-        { }
+       
     }
 }
       

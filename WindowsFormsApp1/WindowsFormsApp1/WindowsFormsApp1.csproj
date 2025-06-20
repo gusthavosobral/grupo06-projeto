@@ -168,7 +168,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avaliacao.cs" />
+    <Compile Include="AvaliacaoRepository.cs" />
+    <Compile Include="Fotos.cs" />
+    <Compile Include="FotosRepository.cs" />
     <Compile Include="Hash.cs" />
+    <Compile Include="ImagemUtil.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +247,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\vanessastockard2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like_cheio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like_vazio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto7.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
