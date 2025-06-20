@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
                 string updateQuery = @"UPDATE avaliacao  SET curtida = @Curtida WHERE id_usuario = @IdUsuario AND id_foto = @IdFoto";
 
 
-                                        
+
                 using (var command = new MySqlCommand(updateQuery, connection))
                 {
                     command.Parameters.AddWithValue("@Curtida", curtida);
@@ -76,11 +76,29 @@ namespace WindowsFormsApp1
                     if (result != null && result != DBNull.Value)
                         return Convert.ToBoolean(result);
 
-                    return null;  // Nenhuma avaliação ainda
+                    return null;
                 }
             }
+
         }
-        
+        public int? ObterCurtidas(int idFoto)
+        {
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                connection.Open();
+                string query = @"SELECT COUNT(*) FROM avaliacao 
+                         WHERE id_foto = @IdFoto AND curtida = true";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@IdFoto", idFoto);
+                    var result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                        return Convert.ToInt32(result);
+                    return null;
+                }
+            }
+
+        }
     }
 }
     

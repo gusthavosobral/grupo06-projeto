@@ -123,11 +123,11 @@
             // 
             this.mensagemlabel.AutoSize = true;
             this.mensagemlabel.BackColor = System.Drawing.Color.Transparent;
-            this.mensagemlabel.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mensagemlabel.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mensagemlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.mensagemlabel.Location = new System.Drawing.Point(12, 296);
             this.mensagemlabel.Name = "mensagemlabel";
-            this.mensagemlabel.Size = new System.Drawing.Size(0, 20);
+            this.mensagemlabel.Size = new System.Drawing.Size(0, 14);
             this.mensagemlabel.TabIndex = 10;
             // 
             // textusername

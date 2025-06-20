@@ -41,7 +41,7 @@
             // LOGIN
             // 
             this.LOGIN.AutoSize = true;
-            this.LOGIN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.LOGIN.BackColor = System.Drawing.Color.Transparent;
             this.LOGIN.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LOGIN.Location = new System.Drawing.Point(12, 95);
             this.LOGIN.Name = "LOGIN";
@@ -52,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 136);
             this.label2.Name = "label2";
@@ -64,7 +64,7 @@
             // introducao
             // 
             this.introducao.AutoSize = true;
-            this.introducao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.introducao.BackColor = System.Drawing.Color.Transparent;
             this.introducao.Font = new System.Drawing.Font("Lucida Bright", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.introducao.ForeColor = System.Drawing.Color.Black;
             this.introducao.Location = new System.Drawing.Point(4, 29);

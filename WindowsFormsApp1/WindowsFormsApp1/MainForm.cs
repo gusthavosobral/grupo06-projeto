@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
         {
             usuarioLogado = usuario;
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -48,8 +49,8 @@ namespace WindowsFormsApp1
 
         private void picliike_Click_1(object sender, EventArgs e)
         {
-           
-       
+
+
             FotosRepository fotosRepo = new FotosRepository(DbUtil.ConnectionString);
             AvaliacaoRepository avaliacaoRepo = new AvaliacaoRepository(DbUtil.ConnectionString);
 
@@ -57,7 +58,7 @@ namespace WindowsFormsApp1
 
             if (idFoto == null) return;
 
-            
+
             liked = !liked; //inverte aqui 
 
             if (liked)
@@ -69,7 +70,7 @@ namespace WindowsFormsApp1
                 picliike.Image = Properties.Resources.like_vazio;
             }
 
-            // Atualiza o banco: Se já tiver avaliação, atualiza só a curtida. Se não tiver, faz insert.
+            // Atualiza o banco. Se já tiver avaliação, atualiza só a curtida. Se não tiver, faz insert.
             bool? curtidaNoBanco = avaliacaoRepo.ObterCurtidaPorUsuarioEFoto(usuarioLogado.Id, idFoto.Value);
 
             if (curtidaNoBanco == null)
@@ -92,13 +93,13 @@ namespace WindowsFormsApp1
             }
         }
 
-       
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
-        
-    
+
+
 
         private void MainForm_Load_1(object sender, EventArgs e)
         {
@@ -109,7 +110,7 @@ namespace WindowsFormsApp1
             CarregarFotoAtual();
 
         }
-        
+
         private List<string> nomesFotos = new List<string>()
 {
     "imagem1",
@@ -151,6 +152,9 @@ namespace WindowsFormsApp1
                     liked = false;
                 }
             }
+
+            int resultado = avaliacaoRepo.ObterCurtidas(idFoto.Value) ?? 0; // se for null, vai o zero//
+            likes.Text = $"Curtidas: Esse post recebeu {resultado} curtidas! Que arraso! <3";
         }
 
 
@@ -161,7 +165,7 @@ namespace WindowsFormsApp1
         }
 
         private void enviar_Click(object sender, EventArgs e)
-        {
+        {   
             AvaliacaoRepository avaliacaoRepo = new AvaliacaoRepository(DbUtil.ConnectionString);
             FotosRepository fotosRepo = new FotosRepository(DbUtil.ConnectionString);
 
@@ -172,8 +176,8 @@ namespace WindowsFormsApp1
             {
                 IdUsuario = usuarioLogado.Id,
                 IdFoto = idFoto.Value,
-                Comentario = comentarios.Text,  
-                Curtida = liked  
+                Comentario = comentarios.Text,
+                Curtida = liked
             };
 
             avaliacaoRepo.InserirComentario(novaAvaliacao);
@@ -181,7 +185,14 @@ namespace WindowsFormsApp1
             MessageBox.Show("Comentário enviado com sucesso!");
             comentarios.Clear();
         }
-    }
-    } 
 
+        private void jogo_Click(object sender, EventArgs e)
+        {
+            ranking paginaranking = new ranking(usuarioLogado);
+            this.Hide();
+            paginaranking.ShowDialog();
+        }
+
+    }
+}
 

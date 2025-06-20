@@ -35,6 +35,8 @@
             this.descricao = new System.Windows.Forms.Label();
             this.comentarios = new System.Windows.Forms.RichTextBox();
             this.enviar = new System.Windows.Forms.Button();
+            this.jogo = new System.Windows.Forms.Button();
+            this.likes = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picliike)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FotoPrincipal)).BeginInit();
             this.SuspendLayout();
@@ -116,9 +118,33 @@
             this.enviar.UseVisualStyleBackColor = false;
             this.enviar.Click += new System.EventHandler(this.enviar_Click);
             // 
+            // jogo
+            // 
+            this.jogo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.jogo.Location = new System.Drawing.Point(29, 338);
+            this.jogo.Name = "jogo";
+            this.jogo.Size = new System.Drawing.Size(137, 75);
+            this.jogo.TabIndex = 7;
+            this.jogo.Text = "Top Fotos";
+            this.jogo.UseVisualStyleBackColor = false;
+            this.jogo.Click += new System.EventHandler(this.jogo_Click);
+            // 
+            // likes
+            // 
+            this.likes.AutoSize = true;
+            this.likes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.likes.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.likes.Location = new System.Drawing.Point(429, 398);
+            this.likes.Name = "likes";
+            this.likes.Size = new System.Drawing.Size(0, 15);
+            this.likes.TabIndex = 8;
+            // 
             // MainForm
             // 
+            this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(776, 506);
+            this.Controls.Add(this.likes);
+            this.Controls.Add(this.jogo);
             this.Controls.Add(this.enviar);
             this.Controls.Add(this.comentarios);
             this.Controls.Add(this.descricao);
@@ -152,5 +178,7 @@
         private System.Windows.Forms.Label descricao;
         private System.Windows.Forms.RichTextBox comentarios;
         private System.Windows.Forms.Button enviar;
+        private System.Windows.Forms.Button jogo;
+        private System.Windows.Forms.Label likes;
     }
 }
